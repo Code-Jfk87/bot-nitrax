@@ -1,5 +1,4 @@
 const Discord = require("discord.js");
-const {token} = require("./config.json")
 const bot = new Discord.Client({
     intents: [
         Discord.Intents.FLAGS.GUILDS,
@@ -31,4 +30,4 @@ bot.on("messageCreate", message => {
     }
 });
 
-bot.login(token);
+bot.login(process.env.token);
