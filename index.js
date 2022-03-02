@@ -30,8 +30,5 @@ bot.on("messageCreate", message => {
     }
 });
 
-bot.on("messageCreate", message => {
-    console.log("tata")
-});
 
 bot.login(process.env.token);
