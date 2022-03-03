@@ -18,8 +18,13 @@ bot.on("ready",() => {
 });
 
 bot.on("guildMemberAdd", members => {
-    const canvvas = Canvas.CreateCanvas(1024, 500)
-})
+    const canvas = Canvas.CreateCanvas(1024, 500);
+    ctx = canvas.getContext("2d");
+    var background = await Canvas.loadImage("./background.png");
+    ctx.drawImage(background, 0, 0, 1024, 500)
+    var attachement = new Discord.MessageAttachment(canvas.toBuffer(), "welcome.png");
+    bot.channels.cache.get("945326723413725254").send({files: [attachement]});
+});
 
 
 
