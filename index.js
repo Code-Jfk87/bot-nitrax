@@ -19,7 +19,7 @@ bot.on("ready",() => {
 });
 
 bot.on("guildMemberAdd", members => {
-
+    
 });                                                                                                                            
                                                                                         
 
