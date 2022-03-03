@@ -17,6 +17,10 @@ bot.on("ready",() => {
     console.log("Bot opérationnel !")
 });
 
+bot.on("messageCreate", message => {
+    console.log("Je suis pert");
+});
+
 bot.on("guildMemberAdd", members => {
     const canvas = Canvas.CreateCanvas(1024, 500);
     ctx = canvas.getContext("2d");
