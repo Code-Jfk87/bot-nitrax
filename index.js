@@ -17,11 +17,8 @@ var prefix = "!"
 bot.on("ready",() => {
     console.log("Bot opérationnel !")
 });
-
-bot.on("guildMemberAdd", members => {
-    
-});                                                                                                                            
-                                                                                        
+                                                                                                                 
+                                                                             
 
 
 bot.on("messageCreate", message => {
