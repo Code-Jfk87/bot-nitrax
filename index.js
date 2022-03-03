@@ -22,9 +22,9 @@ bot.on("messageCreate", message => {
 });
 
 bot.on("guildMemberAdd", members => {
-    const canvas = Canvas.CreateCanvas(1024, 500);
+    const canvas = canvas.CreateCanvas(1024, 500);
     ctx = canvas.getContext("2d");
-    var background = Canvas.loadImage("./background.png");
+    var background = canvas.loadImage("./background.png");
     ctx.drawImage(background, 0, 0, 1024, 500)
     var attachement = new Discord.MessageAttachment(canvas.toBuffer(), "welcome.png");
     bot.channels.cache.get("945326723413725254").send({files: [attachement]});
