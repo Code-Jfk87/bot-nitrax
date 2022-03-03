@@ -31,8 +31,6 @@ bot.on("messageCreate", message => {
         .setDescription("<@" + message.author.id + "> les invitations sont intedit !")
     message.channel.send({embeds: [LinksEmbedWarning]})
     const logsChannel = bot.message.cache.get("949046209073520711")
-    logsChannel.send("Je suis pret à travailler !")
-
     }
 });                                                                                             
 
