@@ -16,8 +16,7 @@ var prefix = "!"
 
 bot.on("ready",() => {
     console.log("Bot opérationnel !")
-    const logsChannel = bot.message.cache.get("949046209073520711")
-    logsChannel.send("Je suis pret à travailler !")                 
+    bot.cache.get.channel("949046209073520711").send("Je suis pret à travailler !")
 });
                                                                                                                  
                                                                              
