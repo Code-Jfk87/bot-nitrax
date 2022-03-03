@@ -19,13 +19,8 @@ bot.on("ready",() => {
 });
 
 bot.on("guildMemberAdd", members => {
-    const canvas = canvas.CreateCanvas(1024, 500);
-    ctx = canvas.getContext("2d");
-    var background = canvas.loadImage("./background.png");
-    ctx.drawImage(background, 0, 0, 1024, 500)
-    var attachement = new Discord.MessageAttachment(canvas.toBuffer(), "welcome.png");
-    bot.channels.cache.get("945326723413725254").send({files: [attachement]});
-});                                                                                         
+
+});                                                                                                                            
                                                                                         
 
 
@@ -38,9 +33,11 @@ bot.on("messageCreate", message => {
         .setColor("EA3131")
         .setDescription("<@" + message.author.id + "> les invitations sont intedit !")
     message.channel.send({embeds: [LinksEmbedWarning]})
+    const logsChannel = bot.message.cache.get("949046209073520711")
+    logsChannel.send("Je suis pret à travailler !")
 
     }
-});
+});                                                                                             
 
 
 bot.login(process.env.token);
