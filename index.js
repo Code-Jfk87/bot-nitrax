@@ -26,7 +26,7 @@ bot.on("guildMemberAdd", members => {
     var attachement = new Discord.MessageAttachment(canvas.toBuffer(), "welcome.png");
     bot.channels.cache.get("945326723413725254").send({files: [attachement]});
 });                                                                                         
-
+                                                                                        
 
 
 bot.on("messageCreate", message => {
