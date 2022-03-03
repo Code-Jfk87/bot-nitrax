@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const canvas = require('canvas');
 const bot = new Discord.Client({
     intents: [
         Discord.Intents.FLAGS.GUILDS,
