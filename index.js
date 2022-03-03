@@ -17,6 +17,12 @@ bot.on("ready",() => {
     console.log("Bot opérationnel !")
 });
 
+bot.on("guildMemberAdd", members => {
+    const canvvas = Canvas.CreateCanvas(1024, 500)
+})
+
+
+
 bot.on("messageCreate", message => {
     const links = ["discord.gg/"]
     if (message.content.includes(links)) {
