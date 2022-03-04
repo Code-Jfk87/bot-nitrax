@@ -16,7 +16,7 @@ var prefix = "!"
 
 bot.on("ready",() => {
     console.log("Bot opérationnel !")
-//    bot.cache.get.channel("949046209073520711").send("Je suis pret à travailler !")
+    bot.user.setActivity("Sauver Le Monde")
 });
 
 bot.on("messageCreate", message => {
