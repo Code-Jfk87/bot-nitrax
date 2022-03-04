@@ -34,7 +34,7 @@ bot.on("messageCreate", message => {
 //quoi feur
 
 bot.on("messageCreate", message => {
-    if(message.content.includes("quoi")){
+    if(message.content("quoi")){
         message.channel.send("feur")
     }
     });
