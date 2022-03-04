@@ -18,9 +18,6 @@ bot.on("ready",() => {
     console.log("Bot opérationnel !")
 //    bot.cache.get.channel("949046209073520711").send("Je suis pret à travailler !")
 });
-                                                                                                                 
-                                                                             
-
 
 bot.on("messageCreate", message => {
     const links = ["discord.gg/"]
@@ -31,9 +28,6 @@ bot.on("messageCreate", message => {
         .setColor("EA3131")
         .setDescription("<@" + message.author.id + "> les invitations sont intedit !")
     message.channel.send({embeds: [LinksEmbedWarning]})
-
-
-
     }
 });                                                                                             
 
