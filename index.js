@@ -31,5 +31,15 @@ bot.on("messageCreate", message => {
     }
 });                                                                                     
 
+//quoi feur
+
+bot.on("messageCreate", message => {
+    if(message.content.includes("quoi")){
+        message.channel.send("feur")
+    }
+    });
+
+
+    
 
 bot.login(process.env.token);
