@@ -29,7 +29,7 @@ bot.on("messageCreate", message => {
         .setDescription("<@" + message.author.id + "> les invitations sont intedit !")
     message.channel.send({embeds: [LinksEmbedWarning]})
     }
-});                                                                                             
+});                                                                                     
 
 
 bot.login(process.env.token);
