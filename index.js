@@ -60,7 +60,8 @@ bot.on("messageCreate", message => {
 bot.on("interactionCreate", intract => {
     if (intract.isButton()){
         if(intract.customId === "bp1"){
-            intract.defer()
+            intract.deferUpdate()
+
         }
     }
 });
