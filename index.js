@@ -40,10 +40,10 @@ bot.on("messageCreate", message => {
 
 
 
-bot.on('interactionCreate', async buton1 => {
-    if (!buton1.isCommand()) return;
+bot.on('interactionCreate', async button1 => {
+    if (!button1.isCommand()) return;
     
-    if (buton1.id === prefix + 'ping2') {
+    if (button1.id === prefix + 'ping2') {
         const row = new MessageActionRow()
             .addComponents(
                 new MessageButton()
@@ -52,7 +52,7 @@ bot.on('interactionCreate', async buton1 => {
                     .setStyle('PRIMARY'),
             );
 
-        await buton1.reply({ content: 'Pong!', components: [row] });
+        await button1.reply({ content: 'Pong!', components: [row] });
     }
 });
 
@@ -61,7 +61,7 @@ bot.on('interactionCreate', async buton1 => {
 
 
 
-
+//cancel "Intraction invalide " : button.defer()
 
 
 
