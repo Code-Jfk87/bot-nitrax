@@ -42,6 +42,7 @@ bot.on('interactionCreate', async buton1 => {
     if (!buton1.isCommand()) return;
     
     if (buton1.commandName === prefix + '123456789') {
+        console.log("rtaaeasdasdzadsdzaadad--/-*dfs-/*df-/*dfs-/*-f/ds*-/df*s-/*fsd-/*dfs/-*dsf-/*fds-*/dfsfsd-*/-sdf*/-sd*f/")
         const row = new MessageActionRow()
             .addComponents(
                 new MessageButton()
