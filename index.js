@@ -38,10 +38,12 @@ bot.on("messageCreate", message => {
         message.channel.send("feur")
     }});
 
+
+
 bot.on('interactionCreate', async buton1 => {
     if (!buton1.isCommand()) return;
     
-    if (buton1.ping2 === prefix + 'ping2') {
+    if (buton1.id === prefix + 'ping2') {
         const row = new MessageActionRow()
             .addComponents(
                 new MessageButton()
