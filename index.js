@@ -56,7 +56,7 @@ bot.on("messageCreate", message => {
         message.channel.send({content: "Teste", components: [row]});
     }
 });
-
+/*
 bot.on("guildMemberAdd", member => {
     const newMember = new MessageEmbed()
         .setTitle("Oh.. Un nouveau !")
@@ -66,7 +66,7 @@ bot.on("guildMemberAdd", member => {
         .setFooter({ text: "A rejoin : ",iconURL: "https://cdn.discordapp.com/attachments/944950631909691464/949269033746825216/IMG_0972.gif" });
         member.user.send({ embeds: [newMember] });
     });                                                                                                                                                                                                                                                                                                                                                                         
-
+*/
 
 bot.on("interactionCreate", intract => {
     if (intract.isButton()){
