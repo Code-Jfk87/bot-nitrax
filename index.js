@@ -26,7 +26,7 @@ bot.on("messageCreate", message => {
     const LinksEmbedWarning = new Discord.MessageEmbed()
         .setTitle("Warning")
         .setColor("EA3131")
-        .setDescription("<@" + message.author.id + "> les invitations sont intedit !")
+        .setDescription("<@" + message.author.id + "> les invitations sont interdit !")
     message.channel.send({embeds: [LinksEmbedWarning]})
     }
 });                                                                                     
@@ -41,4 +41,4 @@ bot.on("messageCreate", message => {
 
     
 
-bot.login(process.env.token);
+bot.login(process.env.token);a
