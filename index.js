@@ -42,7 +42,7 @@ bot.on("messageCreate", message => {
 
 
 bot.on("messageCreate", message => {
-    if (message.content === prefix + "bouton") {
+    if (message.content === "bouton") {
         var row = new Discord.MessageActionRow()
         .addComponents(new Discord.MessageButton()
             .setCustomId("bp1")
@@ -51,6 +51,7 @@ bot.on("messageCreate", message => {
             .setEmoji("✔️")
 
         );
+        message.channel.send({content: "Teste", components: [row]});
     }
 });
 
