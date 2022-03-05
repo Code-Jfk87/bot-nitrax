@@ -38,21 +38,21 @@ bot.on("messageCreate", message => {
         message.channel.send("feur")
     }});
 
-    bot.on('interactionCreate', async buton1 => {
-        if (!buton1.isCommand()) return;
+bot.on('interactionCreate', async buton1 => {
+    if (!buton1.isCommand()) return;
     
-        if (buton1.commandName === prefix + 'ping') {
-            const row = new MessageActionRow()
-                .addComponents(
-                    new MessageButton()
-                        .setCustomId('primary')
-                        .setLabel('Primary')
-                        .setStyle('PRIMARY'),
-                );
-    
-            await buton1.reply({ content: 'Pong!', components: [row] });
-        }
-    });
+    if (buton1.commandName === prefix + '123456789') {
+        const row = new MessageActionRow()
+            .addComponents(
+                new MessageButton()
+                    .setCustomId('primary')
+                    .setLabel('Primary')
+                    .setStyle('PRIMARY'),
+            );
+
+        await buton1.reply({ content: 'Pong!', components: [row] });
+    }
+});
 
 
 
