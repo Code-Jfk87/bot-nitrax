@@ -41,4 +41,4 @@ bot.on("messageCreate", message => {
 
     
 
-bot.login(process.env.token);a
+bot.login(process.env.token);
