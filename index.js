@@ -28,8 +28,8 @@ bot.on("messageCreate", message => {
         .setColor("EA3131")
         .setDescription("<@" + message.author.id + "> les invitations sont interdit !")
     message.channel.send({embeds: [LinksEmbedWarning]})
-    }
-});                                                                                     
+    } 
+});                                                    
 
 //quoi feur
 
