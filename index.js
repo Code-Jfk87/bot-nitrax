@@ -43,6 +43,7 @@ bot.on("messageCreate", message => {
 
 bot.on("messageCreate", message => {
     if (message.content === "bouton") {
+        message.delete()
         var row = new Discord.MessageActionRow()
             .addComponents(new Discord.MessageButton()
                 .setCustomId("bp1")
@@ -59,10 +60,7 @@ bot.on("messageCreate", message => {
 bot.on("interactionCreate", intract => {
     if (intract.isButton()){
         if(intract.customId === "bp1"){
-            var intractAuthor = intract.author()
-            button.defer()
-            intractAuthor.send("tatata")
-
+            intract.defer()
         }
     }
 });
