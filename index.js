@@ -57,6 +57,17 @@ bot.on("messageCreate", message => {
     }
 });
 
+bot.on("guildMemberAdd", member => {
+    const newMember = new MessageEmbed()
+        .setTitle("Oh.. Un nouveau !")
+        .setColor("00F0FF")
+        .setDescription("Salut <@" + member.id + "> sur " +  + ", tout d'abord, vas lire le règlement (pour pas te faire ban) aprés, su tu recherches de l'aide, vas dans <#939631823426822224> (y'en a dautre si tu veux).\n Si t'as juste envie de parler vas dans <#937790247708790844>. Une question ? Vas dans <#937507415237218364>")
+        .setTimestamp()
+        .setFooter({ text: "A rejoin : ",iconURL: "https://cdn.discordapp.com/attachments/944950631909691464/949269033746825216/IMG_0972.gif" });
+        message.user.send({ embeds: [newMember] });
+    });                                                                                                                                                                                                                                                                                                                                                                         
+
+
 bot.on("interactionCreate", intract => {
     if (intract.isButton()){
         if(intract.customId === "bp1"){
@@ -108,15 +119,4 @@ bot.on("interactionCreate", interaction => {
 
        /////
 
-       bot.on("guildMemberAdd", member => {
-const newMember = new MessageEmbed()
-	.setTitle("Oh.. Un nouveau !")
-    .setColor("00F0FF")
-	.setDescription("Salut <@" + member.id + "> sur " +  + ", tout d'abord, vas lire le règlement (pour pas te faire ban) aprés, su tu recherches de l'aide, vas dans <#939631823426822224> (y'en a dautre si tu veux).\n Si t'as juste envie de parler vas dans <#937790247708790844>. Une question ? Vas dans <#937507415237218364>")
-//	.setThumbnail("")
-//	.setImage("")
-	.setTimestamp()
-	.setFooter({ text: "A rejoin : ",iconURL: "https://cdn.discordapp.com/attachments/944950631909691464/949269033746825216/IMG_0972.gif" });
-    bot.channels.cache.get("946883009280352308").send({ embeds: [newMember] });
-});                                                                                                                                                                                                                                                                                                                                                                         
 */
