@@ -40,21 +40,46 @@ bot.on("messageCreate", message => {
 
 
 
-bot.on('interactionCreate', async button1 => {
-    if (!button1.isCommand()) return;
-    
-    if (button1.id === prefix + 'ping2') {
-        const row = new MessageActionRow()
-            .addComponents(
-                new MessageButton()
-                    .setCustomId('primary')
-                    .setLabel('Primary')
-                    .setStyle('PRIMARY'),
-            );
 
-        await button1.reply({ content: 'Pong!', components: [row] });
+bot.on("messageCreate", message => {
+    if (message.content === prefix + "bouton") {
+        var row = new Discord.MessageActionRow()
+        .addComponents(new Discord.MessageButton()
+            .setCustomId("bp1")
+            .setLabel(" Je m'inscrit")
+            .setStyle("SUCCESS")
+            .setEmoji("✔️")
+
+        );
     }
 });
+
+bot.on("interactionCreate", intract => {
+    if (intract.isButton()){
+        if(intract.customId === "bp1"){
+            var intractAuthor = intract.author.id()
+            button.defer()
+            intractAuthor.send("tatata")
+
+        }
+    }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -62,17 +87,6 @@ bot.on('interactionCreate', async button1 => {
 
 
 //cancel "Intraction invalide " : button.defer()
-
-
-
-
-
-
-
-
-
-
-
 
 
 
