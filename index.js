@@ -44,13 +44,14 @@ bot.on("messageCreate", message => {
 bot.on("messageCreate", message => {
     if (message.content === "bouton") {
         var row = new Discord.MessageActionRow()
-        .addComponents(new Discord.MessageButton()
-            .setCustomId("bp1")
-            .setLabel(" Je m'inscrit")
-            .setStyle("SUCCESS")
-            .setEmoji("✔️")
+            .addComponents(new Discord.MessageButton()
+                .setCustomId("bp1")
+                .setLabel(" Je m'inscrit")
+                .setStyle("SUCCESS")
+                .setEmoji("✔️")
 
         );
+
         message.channel.send({content: "Teste", components: [row]});
     }
 });
@@ -64,7 +65,7 @@ bot.on("interactionCreate", intract => {
 
         }
     }
-})
+});
 
 
 
