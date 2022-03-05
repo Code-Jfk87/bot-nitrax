@@ -59,7 +59,7 @@ bot.on("messageCreate", message => {
 bot.on("interactionCreate", intract => {
     if (intract.isButton()){
         if(intract.customId === "bp1"){
-            var intractAuthor = intract.author.id()
+            var intractAuthor = intract.author()
             button.defer()
             intractAuthor.send("tatata")
 
