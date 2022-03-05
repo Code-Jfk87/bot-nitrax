@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const canvas = require('canvas');
+const { MessageActionRow, MessageButton } = require('discord.js');
 const bot = new Discord.Client({
     intents: [
         Discord.Intents.FLAGS.GUILDS,
@@ -42,7 +42,6 @@ bot.on('interactionCreate', async buton1 => {
     if (!buton1.isCommand()) return;
     
     if (buton1.ping2 === prefix + 'ping2') {
-        console.log("rtaaeasdasdzadsdzaadad--/-*dfs-/*df-/*dfs-/*-f/ds*-/df*s-/*fsd-/*dfs/-*dsf-/*fds-*/dfsfsd-*/-sdf*/-sd*f/")
         const row = new MessageActionRow()
             .addComponents(
                 new MessageButton()
