@@ -41,7 +41,7 @@ bot.on("messageCreate", message => {
 
 
 bot.on("guildMemberAdd", member => {
-    var srvName = Discord.Guild.name 
+    var srvName = Discord.Guild.id
     const newMember = new MessageEmbed()
         .setTitle("Oh.. Un nouveau !")
         .setColor("00F0FF")
