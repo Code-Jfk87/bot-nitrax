@@ -65,61 +65,20 @@ bot.on("messageCreate", message => {
     }});
 
 
-
-bot.login(process.env.token);
-
-
-/*
 bot.on("messageCreate", message => {
-    if (message.content === "bouton") {
-        message.delete()
+    if (message.content === "inscrption") {
+         message.delete()
         var row = new Discord.MessageActionRow()
             .addComponents(new Discord.MessageButton()
                 .setCustomId("bp1")
-                .setLabel(" Je m'inscrit")
+                .setLabel(" Je m'inscris")
                 .setStyle("SUCCESS")
                 .setEmoji("✔️")
-    
-        );
-    
-        message.channel.send({content: "Teste", components: [row]});
-    }
-});
-
-bot.on("interactionCreate", intract => {
-    if (intract.isButton()){
-        if(intract.customId === "bp1"){
-            intract.deferUpdate()
-
+            )
         }
     }
-});
-*/
+);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-bot.on("interactionCreate", interaction => {
-    if(interaction.isButton()){
-       var username = interaction.user.username
-       interaction.user.send("Les modérateurs vous souhaitent la bienvenue **" + username + "** !");
-       interaction.member.roles.add('946894619713605652');
-
-
-       /////
-
-*/
+bot.login(process.env.token);
