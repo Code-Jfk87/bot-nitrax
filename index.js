@@ -64,21 +64,46 @@ bot.on("messageCreate", message => {
         message.react("😂")
     }});
 
-
 bot.on("messageCreate", message => {
-    if (message.content === "inscrption") {
-         message.delete()
-        var row = new Discord.MessageActionRow()
+    if (message.content === "inscription") {
+        message.delete()
+        var bossMythique = new Discord.MessageActionRow()
             .addComponents(new Discord.MessageButton()
                 .setCustomId("bp1")
-                .setLabel(" Je m'inscris")
+                .setLabel(" Je m'inscris !")
                 .setStyle("SUCCESS")
                 .setEmoji("✔️")
             )
+            .addComponents(new Discord.MessageButton()
+                .setCustomId("bp2")
+                .setLabel("Finalement, nan.")
+                .setStyle("DANGER")
+                .setEmoji("❌")
+                
+            );
+    
+            message.channel.send({content: "**Inscription !**\n\nPour vous inscrire, il vous suffit de cliquer sur le bouton ", components: [bossMythique]});
+    
+        }
+    }
+); 
+    
+bot.on("interactionCreate", (interaction) => {
+    if(interaction.isButton()){
+        if(interaction.customId === "bp1") {
+            interaction.channel.send("Vous êtes inscrit <@" + interaction.user.id + "> !");
+            interaction.deferUpdate();
+            interaction.member.roles.add("951946540921024562"); //salon historique
+            }
+    
+        if(interaction.customId == "bp2"){
+            interaction.channel.send("Vous n'êtes plus inscrit <@" + interaction.user.id + "> !");
+            interaction.deferUpdate();
+            interaction.member.roles.remove("951946540921024562"); //salon historique
+            }
         }
     }
 );
-
 
 
 bot.login(process.env.token);
