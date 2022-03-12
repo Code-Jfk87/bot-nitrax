@@ -47,7 +47,8 @@ bot.on("guildMemberAdd", member => {
         .setTimestamp()
         .setFooter({ text: "A rejoin : ",iconURL: "https://cdn.discordapp.com/attachments/944950631909691464/949269033746825216/IMG_0972.gif" })
         member.user.send({ embeds: [newMember] });
-    });   
+    }
+);   
     
  
 
@@ -62,7 +63,9 @@ bot.on("messageCreate", message => {
         message.react("🇺")
         message.react("🇷")
         message.react("😂")
-    }});
+        }
+    }
+);
 
 bot.on("messageCreate", message => {
     if (message.content === "inscription") {
@@ -91,15 +94,16 @@ bot.on("messageCreate", message => {
 bot.on("interactionCreate", (interaction) => {
     if(interaction.isButton()){
         if(interaction.customId === "bp1") {
-            interaction.channel.send("Vous êtes inscrit <@" + interaction.user.id + "> !");
+            bot.channels.cache.get("951952606656360489").send("Vous êtes inscrit <@" + interaction.user.id + "> !"); //salon historique
             interaction.deferUpdate();
-            interaction.member.roles.add("952228825218031636"); //salon historique
+            interaction.member.roles.add("952228825218031636"); 
             }
     
         if(interaction.customId == "bp2"){
-            interaction.channel.send("Vous n'êtes plus inscrit <@" + interaction.user.id + "> !");
+            bot.channels.cache.get("951952606656360489").send("Vous n'êtes plus inscrit <@" + interaction.user.id + "> !"); //salon historique
             interaction.deferUpdate();
-            interaction.member.roles.remove("952228825218031636"); //salon historique
+            interaction.member.roles.remove("952228825218031636");
+            
             }
         }
     }
