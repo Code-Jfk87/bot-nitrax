@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const { MessageEmbed } = require('discord.js');
+const prefix = require("./config.json".prefix)
 
 const bot = new Discord.Client({
     intents: [
@@ -12,8 +13,6 @@ const bot = new Discord.Client({
 
 
 //préfix commande
-var prefix = "!"
-
 
 bot.on("ready",() => {
     console.log("Bot opérationnel !")
@@ -65,7 +64,7 @@ bot.on("messageCreate", message => {
     }});
 
 bot.on("messageCreate", message => {
-    if (message.content === "inscription") {
+    if (message.content === prefix, "inscription") {
         message.delete()
         var bossMythique = new Discord.MessageActionRow()
             .addComponents(new Discord.MessageButton()
