@@ -105,5 +105,5 @@ bot.on("interactionCreate", (interaction) => {
     }
 );
 
-
+//
 bot.login(process.env.token);
