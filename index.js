@@ -93,13 +93,13 @@ bot.on("interactionCreate", (interaction) => {
         if(interaction.customId === "bp1") {
             interaction.channel.send("Vous êtes inscrit <@" + interaction.user.id + "> !");
             interaction.deferUpdate();
-            interaction.member.roles.add("951946540921024562"); //salon historique
+            interaction.member.roles.add("952228825218031636"); //salon historique
             }
     
         if(interaction.customId == "bp2"){
             interaction.channel.send("Vous n'êtes plus inscrit <@" + interaction.user.id + "> !");
             interaction.deferUpdate();
-            interaction.member.roles.remove("951946540921024562"); //salon historique
+            interaction.member.roles.remove("952228825218031636"); //salon historique
             }
         }
     }
