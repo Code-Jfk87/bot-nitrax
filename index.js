@@ -86,7 +86,7 @@ bot.on("messageCreate", message => {
         }
     }
 ); 
-    
+/*
 bot.on("interactionCreate", (interaction) => {
     if(interaction.isButton()){
         if(interaction.customId === "bp1") {
@@ -103,5 +103,5 @@ bot.on("interactionCreate", (interaction) => {
         }
     }
 );
-
+*/
 bot.login(process.env.token);
