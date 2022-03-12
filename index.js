@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
 const { MessageEmbed } = require('discord.js');
-const prefix = require("./config.json".prefix)
 
 const bot = new Discord.Client({
     intents: [
@@ -13,6 +12,8 @@ const bot = new Discord.Client({
 
 
 //préfix commande
+var prefix = "!"
+
 
 bot.on("ready",() => {
     console.log("Bot opérationnel !")
@@ -64,7 +65,7 @@ bot.on("messageCreate", message => {
     }});
 
 bot.on("messageCreate", message => {
-    if (message.content === prefix, "inscription") {
+    if (message.content === "inscription") {
         message.delete()
         var bossMythique = new Discord.MessageActionRow()
             .addComponents(new Discord.MessageButton()
@@ -86,22 +87,23 @@ bot.on("messageCreate", message => {
         }
     }
 ); 
-/*
+    
 bot.on("interactionCreate", (interaction) => {
     if(interaction.isButton()){
         if(interaction.customId === "bp1") {
             interaction.channel.send("Vous êtes inscrit <@" + interaction.user.id + "> !");
             interaction.deferUpdate();
-            interaction.member.roles.add("951952606656360489"); //salon historique
+            interaction.member.roles.add("952228825218031636"); //salon historique
             }
     
         if(interaction.customId == "bp2"){
             interaction.channel.send("Vous n'êtes plus inscrit <@" + interaction.user.id + "> !");
             interaction.deferUpdate();
-            interaction.member.roles.remove("951952606656360489"); //salon historique
+            interaction.member.roles.remove("952228825218031636"); //salon historique
             }
         }
     }
 );
-*/
+
+
 bot.login(process.env.token);
