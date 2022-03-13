@@ -85,7 +85,7 @@ bot.on("messageCreate", message => {
                 
             );
     
-            message.channel.send({content: "**Inscription !**\n\nPour vous inscrire, il vous suffit de cliquer sur \"Je m'inscirs\" !" , components: [bossMythique]})
+            message.channel.send({content: "**Inscription !**\n\nSi vous voulez faire le boss mythique mais que vous n'avez personne cliqué sur \"Je m'inscris\" pour le faire avec <@938426561495973888>, ils vous pingerons qaund ils seront disponibles.", components: [bossMythique]})
     
         }
     }
