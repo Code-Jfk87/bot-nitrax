@@ -7,7 +7,10 @@ const bot = new Discord.Client({
         Discord.Intents.FLAGS.GUILD_MESSAGES,
         Discord.Intents.FLAGS.GUILD_MEMBERS,
         Discord.Intents.FLAGS.GUILD_MESSAGE_REACTIONS
-    ]
+        
+
+    ],
+    allowedMentions: { parse: ["roles", "users"] },
 });
 
 
@@ -36,7 +39,7 @@ bot.on("messageCreate", message => {
 });                                                    
 
 
-
+//Je suis Jfk87 et pas qqn d'autre x)
 
 bot.on("guildMemberAdd", member => {
     var srvName = Discord.Guild.id
@@ -49,10 +52,21 @@ bot.on("guildMemberAdd", member => {
         member.user.send({ embeds: [newMember] });
     }
 );   
-    
- 
-
-
+/*
+//message.chanel.send("<@> qqn c'est connecté(e) dans Attente Modo")
+bot.on('voiceStateUpdate', (oldMember, newMember) => {
+    let newUserChannel = newMember.voiceChannel
+    let oldUserChannel = oldMember.voiceChannel
+  
+  
+    if(oldUserChannel === undefined && newUserChannel !== undefined) {
+  
+        message.chanel.send("<@『👨🏻‍⚖️』 Moderateur > qqn c'est connecté(e) dans Attente Modo")
+  
+    } else if(newUserChannel === undefined){
+  
+        message.chanel.send("<@『👨🏻‍⚖️』 Moderateur > qqn c'est connecté(e) dans Attente Modo")
+*/
 
 //quoi feur
 
